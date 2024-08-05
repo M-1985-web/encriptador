@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Encriptador by M-1985-web</title>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="imagenes/Logo-1.png">
+
+        <div class="title">
+            <h2>Encriptador de texto</h2>
+        </div>
+        
+    </header>
+    <main>
+        <section>
+            <form id="formulario">
+                <input type="text" id="word" class="txt-word" placeholder="Ingrese su frase para encriptar">
+            </form>
+            
+
+            <div class="buttons">
+                <button 
+                    type="submit" 
+                    onclick="encriptar(this)" 
+                    class="encriptar" 
+                    id="btn-encript"
+                >Encriptar</button>
+
+                <button 
+                    type="submit" 
+                    onclick="desencriptar(this)" 
+                    class="desencriptar" 
+                    id="btn-desencriptar"
+                >Desencriptar</button>
+
+            </div>
+
+          
+            <div class="controles">
+                <div class="advertencia">
+                    <span class="icono-info"></span><small><img src="imagenes/exclamation.png" alt="imagen-exclamación"> Solo letras
+                        minúsculas y sin acentos</small>
+                </div>
+            </div>
+        
+
+
+
+        </section>
+
+        <section class="container">
+            <img src="imagenes/Muñeco.png" class="img-looking">
+            <div>
+               <label class="lb-info" id="info">Ningún mensaje fue encontrado</label><br>
+               <label class="txt-encript" id="text-encript">Ingresa el texto que desees encriptar o descencriptar</label><br>
+
+                <div>
+                    <button 
+                        type="submit" 
+                        onclick="copiarAlPortapapeles('text-encript') " 
+                        class="btn-copy"
+                        id="copy"
+                    >Copiar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>

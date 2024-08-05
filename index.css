@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+/*creacion de variables para evitar muchas repeticiones*/
+:root {
+    --primary-color: #0A3871;
+    --secondary-color: #4e68fd;
+    --background-gradient: linear-gradient(to right, #c9d6ff, #e2e2e2);
+    --font-family: 'Roboto', sans-serif;
+}
+
+
+* {
+    font-family: var(--font-family);
+}
+
+body {
+    background: var(--background-gradient);
+    color: var(--primary-color);
+}
+
+/*
+.advertencia {
+    height: 2rem;
+    font-size: 1rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: rgb(73, 137, 240);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+*/
+.advertencia {
+    height: 2rem;
+    font-size: 1rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: rgb(73, 137, 240);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.advertencia img {
+    max-width: 5%;
+    height: auto;
+    display:inline;
+    margin: 0 auto;
+}
+
+
+.title{
+    text-align:center;
+}
+
+.txt-word{
+    position: absolute;
+    width: 710px;
+    height: 40px;
+    left: 100px;
+    top: 168px;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 100%;
+    color: #0A3871;
+    border-radius: 20px;
+}
+
+.container{
+    /*posicion absoluta*/
+    position:sticky;
+    width: 400px;
+    height: 584px;
+    left: 950px;
+    top: 40px;
+    /* White */
+    background: #FFFFFF;
+    /* shadow */
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    text-align: center;
+}
+
+.img-looking{
+    margin-top: 2px;
+}
+/*Its a change state of encrypt or desencrypt */
+
+.lb-info{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    /* or 29px */
+    text-align: center;
+    /* Gray/gray-500 */
+    color: #343A40;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 16px 0px;
+}
+
+/*text field of word  */
+
+.txt-encript{
+    position: static;
+    width: 336px;
+    height: 48px;
+    left: 0px;
+    top: 74px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    /* or 24px */
+    text-align: center;
+    /* Gray/gray-400 */
+    color: #495057;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 16px 0px;
+}
+/*properties of button copy */
+
+.btn-copy{
+    padding: 28px;
+    margin-top: 50px;
+    width: 336px;
+    height: 67px;
+    left: 32px;
+    top: 15px;
+    /* Dark blue/dark-blue-300 */
+    border: 1px solid #0A3871;
+    box-sizing: border-box;
+    border-radius: 24px;
+}
+/*hover of button copy */
+
+.btn-copy:hover{
+    background-color: #4e68fd;
+    transition: 0.5s;
+    color: #FFFFFF;
+}
+
+
+/*button encriptar */
+.encriptar{
+    align-items: flex-start;
+    padding: 24px;
+    position: static;
+    width: 328px;
+    height: 67px;
+    left: 0px;
+    top: 0px;
+    /* Dark blue/dark-blue-300 */
+    background: var(--primary-color);
+    color: #c9d6ff;
+    border-radius: 24px;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 24px;
+}
+.encriptar:hover{
+    background-color: var(--secondary-color);
+    transition: 0.5s;
+    
+}
+
+/*button desencriptar */
+.desencriptar{
+    /* Auto layout */
+    text-align: center;
+    padding: 24px;
+    position: static;
+    width: 328px;
+    height: 67px;
+    left: 372px;
+    top: 0px;
+    /* Light gray */
+    background: #D8DFE8;
+    /* Dark blue/dark-blue-300 */
+    border: 1px solid #4c85caee;
+    box-sizing: border-box;
+    border-radius: 24px;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 24px;
+}
+
+.desencriptar:hover{
+    background-color: #466fa1;
+    transition: 0.5s;
+    color: #fff;
+}
+
+/*container buttons */
+.buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    position: absolute;
+    width: 680px;
+    height: 67px;
+    left: 85px;
+    top: 485px;
+    color: #e5e6e7;
+}
+
+.logo {
+    width: 5vw;
+        /* El logo ocupará el 10% del ancho de la ventana */
+    height: auto;
+}
+
+@media (max-width: 600px) {
+    .logo {
+        width: 40px;
+        /* Tamaño más pequeño para pantallas pequeñas */
+    }
+}
+/*----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+
+
+
+
+/*media queries */
+
+/* large service or tablet*/
+@media screen and (max-width: 990px ){
+    .txt-word{
+        width: 60%;
+    }
+        .logo {
+            width: 40px;
+            /* Tamaño más pequeño para pantallas pequeñas */
+        }
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+        position: absolute;
+        width: 388px;
+        height: 433px;
+        left: 180px;
+        top: 358px;
+        /* White */
+        background: #FFFFFF;
+        /* shadow */
+        box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+        border-radius: 32px;
+    }
+   .buttons{
+        display: flex;
+        align-items: center;
+        padding: 0px;
+        position: absolute;
+        width: 100px;
+        height: 57px;
+        left: 80px;
+        top: 270px;
+   }
+   .encriptar,.desencriptar{
+       width: 250px;
+   }
+   .img-looking{
+       width: 200px;
+       height: 200px;
+   }
+}
+
+/* medium devices */
+@media screen and (max-width: 768px) {
+    .title{
+        text-align: center;
+    }
+    .txt-word{
+        text-align: center;
+        left: 150px;
+        align-items: center;
+        width: 23rem;
+    }
+    
+    
+    
+    .buttons, .encriptar, .desencriptar{
+        width: 13rem;
+
+    }
+    .container{
+        left: 9rem;
+        width: 21rem;
+    }
+    
+    .img-looking{
+        width: 10rem;
+        margin-top: 0;
+        margin-bottom: 2rem;
+    }
+        
+        
+        
+
+}
+/* phone devices */
+@media screen and (max-width: 425px){
+    .title{
+        text-align: center;
+    }
+    img{
+        width: 5rem;
+    }
+    
+    .txt-word{
+        padding: 0;
+        margin: 0;
+        left: 1rem;
+        width: 20rem;
+        height: 4rem;
+        text-align: center;
+    }
+    
+    .buttons{
+        left: 0;
+        width: 3rem;
+    }
+    .encriptar, .desencriptar{
+        width: 8rem;
+        left: 0;
+    }
+    .container{
+        left: 2rem;
+        width: 15rem;
+        align-items: center;
+        align-items: center;
+    }
+    .img-looking{
+        width: 8rem;
+        height: 8rem;
+        margin-top: 0;   
+    }
+    .icono-info{
+        font-size: 2px;
+    }
+    
+    .txt-encript{
+        margin-top: 7rem;
+        font-size: 16px;
+    }
+    .btn-copy{
+        width: 9rem;
+        margin-top: 10rem;
+    }  
+}
